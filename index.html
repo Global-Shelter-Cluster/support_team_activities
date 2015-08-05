@@ -309,7 +309,7 @@ ds.fetch({
       // Item quantity chart
       itm_qty_chart
                 .width(400)
-                .height(550)
+                .height(400)
                 .dimension(cf.item)
                 .on("filtered", getFiltersValues)
                 .group(item_total_quantity = item_total_quantity || 0)
@@ -336,7 +336,7 @@ ds.fetch({
       // Target population chart
       proc_total_target_chart
                 .width(400)
-                .height(550)
+                .height(400)
                 .dimension(cf.targetpop)
                 .group(targetpop_by_total  = targetpop_by_total || 0)
                 .elasticX(false)
@@ -348,7 +348,7 @@ ds.fetch({
       // Operation chart
       proc_total_op
                 .width(400)
-                .height(550)
+                .height(400)
                 .dimension(cf.op)
                 .group(op_by_total = op_by_total || 0)
                 .elasticX(false)
