@@ -127,10 +127,18 @@
 
 // Miso dataset importing google spreadsheet by spreadsheet ID
         var ds = new Miso.Dataset({
-            importer : Miso.Dataset.Importers.GoogleSpreadsheet,
-            parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
-            key : "1defWVBu1yH5rffRI0EEd6lajfIb9ZRb-iJgn4xqYGY4",
-            worksheet : "1"
+  key : "119hTf0bswZhMbqbTbczJmxImqN--d9arT84VntnJfCk",
+  worksheet : "0",
+  importer: Miso.Dataset.Importers.GoogleSpreadsheet,
+  parser : Miso.Dataset.Parsers.GoogleSpreadsheet
+});
+ds.fetch({
+  success : function() {
+    // your success callback here!
+  },
+  error : function() {
+    // your error callback here!
+  }
 });
 
 // declare array to be filled with data from Google spreadsheet
