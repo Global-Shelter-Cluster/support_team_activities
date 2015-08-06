@@ -19,6 +19,10 @@
 
     <!-- UNHCR Logo -->
     <div style="position: relative;float: right; top: -18px" >
+<<<<<<< HEAD
+        <img src="images/logo.png" >
+=======
+>>>>>>> origin/gh-pages
     </div>
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -54,6 +58,11 @@
 
   <!-- design page layout with bootsrap -->
 
+<<<<<<< HEAD
+    <div style="display: block; text-align:center" class="container" id="dashboard">
+        <h1><strong>Iraq Supply Pipeline</strong></h1>
+        <div style="text-align:center" class="col-xs-12"><h5>Click on any of those graphs below to filter and slice the data. </a>.</h5></div>
+=======
 <div  class="container" id="dashboard">
         <div class="row">
         
@@ -65,6 +74,7 @@
         <div style="text-align:center" class="col-md-4">
           <img src="images/logo.png" >
         </div>
+>>>>>>> origin/gh-pages
 
     <div class="row">
         <div style="text-align:left;float: left" class="col-md-8" data-position="right"><a class="reset btn btn-primary btn-sm"  data-step="8" data-intro="Click this button to reset all values or click 'reset' next to the title of a filtered chart." data-position="right"  id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a></div>
@@ -125,10 +135,17 @@
 
 // Miso dataset importing google spreadsheet by spreadsheet ID
         var ds = new Miso.Dataset({
+<<<<<<< HEAD
+            importer : Miso.Dataset.Importers.GoogleSpreadsheet,
+            parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
+            key : "119hTf0bswZhMbqbTbczJmxImqN--d9arT84VntnJfCk",
+            worksheet : "1"
+=======
   key : "1defWVBu1yH5rffRI0EEd6lajfIb9ZRb-iJgn4xqYGY4",
   worksheet : "1",
   importer: Miso.Dataset.Importers.GoogleSpreadsheet,
   parser : Miso.Dataset.Parsers.GoogleSpreadsheet
+>>>>>>> origin/gh-pages
 });
 
 // declare array to be filled with data from Google spreadsheet
