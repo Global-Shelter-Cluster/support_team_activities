@@ -5,21 +5,24 @@
 <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
 <meta name="author" content="Adam Toth">
 
-<meta property="og:title" content="Iraq NFI Supply Pipeline">
+<meta property="og:title" content="GSC Support Team Monitoring">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Iraq Supply Pipeline">
-<meta property="og:description" content="Iraq Supply Pipeline">
+<meta property="og:site_name" content="GSC Support Team Monitoring">
+<meta property="og:description" content="GSC Support Team Monitoring">
 
 
 
-    <title>Iraq Supply Pipeline</title>
+    <title>GSC Support Team Monitoring</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
     <!-- UNHCR Logo -->
     <div style="position: relative;float: right; top: -18px" >
+<<<<<<< HEAD
         <img src="images/logo.png" >
+=======
+>>>>>>> origin/gh-pages
     </div>
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -46,7 +49,6 @@
 
 
     <!-- Favicon -->
-    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
 
   </head>
   <body>
@@ -56,47 +58,60 @@
 
   <!-- design page layout with bootsrap -->
 
+<<<<<<< HEAD
     <div style="display: block; text-align:center" class="container" id="dashboard">
         <h1><strong>Iraq Supply Pipeline</strong></h1>
         <div style="text-align:center" class="col-xs-12"><h5>Click on any of those graphs below to filter and slice the data. </a>.</h5></div>
+=======
+<div  class="container" id="dashboard">
+        <div class="row">
+        
+        <div class="col-md-8">
+           <h1><strong>GSC Support Team Monitoring</strong></h1>
+           <h5>Click on any of the graphs below to filter and slice the data.</h5>
+        </div>
+
+        <div style="text-align:center" class="col-md-4">
+          <img src="images/logo.png" >
+        </div>
+>>>>>>> origin/gh-pages
 
     <div class="row">
         <div style="text-align:left;float: left" class="col-md-8" data-position="right"><a class="reset btn btn-primary btn-sm"  data-step="8" data-intro="Click this button to reset all values or click 'reset' next to the title of a filtered chart." data-position="right"  id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a></div>
         <div style="text-align:right;float: right" class="col-md-4"><a class="btn btn btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Tutorial</a>
         </div>
     </div>
-		
+
 <div class="row">
 <div style="height: 30px">
-  <div id="item_value" class="col-md-4 dc-chart"  data-step="1" data-intro="Click on this chart to filter values by item group. The chart scale changes dynamically." data-position="right" style="text-align:left"><h5>NFI Values by Item Group (USD) <a class="reset" href="javascript:value_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
-    <div id="itm_qty" class="col-md-4 dc-chart" style="text-align:left"  data-step="2" data-intro="Click on this chart to filter item quantities by group. The chart scale changes dynamically." data-position="right" ><h5>NFI Quantities <a class="reset" href="javascript:itm_qty_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
-  <div id="proc_total_status" class="col-md-4 dc-chart"  data-step="3" data-intro="Click on this pie chart to filter items by status."  data-position="left" style="text-align:left" ><h5>NFI Value by Status (USD) <a class="reset" href="javascript:proc_total_status_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
-
-
-
+      <!--
+      <div id="item_value" class="col-md-4 dc-chart"  data-step="1" data-intro="Click on this chart to filter values by item group. The chart scale changes dynamically." data-position="right" style="text-align:left"><h5>NFI Values by Item Group (USD) <a class="reset" href="javascript:value_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
+      -->
+      <div id="itm_qty" class="col-md-4 dc-chart" style="text-align:left"  data-step="2" data-intro="Click on this chart to filter item quantities by group. The chart scale changes dynamically." data-position="right" >
+          <h5>Type of support/mission
+          <a class="reset" href="javascript:itm_qty_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
+      
+      <div id="proc_total_status" class="col-md-4 dc-chart"  data-step="3" data-intro="Click on this pie chart to filter items by status."  data-position="left" style="text-align:left" >
+          <h5>Hosting organisation<a class="reset" href="javascript:proc_total_status_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5>
+       </div>
+ <div id="proc_total_target" class="col-md-4 dc-chart"  data-step="4" data-intro="Click on this chart to filter items/activities by the targeted population."  data-position="left"  style="text-align:left" >
+            <h5>Function
+            <a class="reset" href="javascript:proc_total_target_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
 </div>
 
 <div class="row">
-<div id="proc_total_target" class="col-md-4 dc-chart"  data-step="4" data-intro="Click on this chart to filter items/activities by the targeted population."  data-position="left"  style="text-align:left" ><h5>NFI Value by Target Population (USD) <a class="reset" href="javascript:proc_total_target_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
-<div id="proc_total_op" class="col-md-4 dc-chart"  data-step="5" data-intro="Click on this chart to filter items/activities by the operation."  data-position="left"  style="text-align:left" ><h5>NFI Value by Operation (USD) <a class="reset" href="javascript:proc_total_op.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
-
-<div class=>
-    <table>
-        <tr>
-
-        </tr>
-        <tr>
-            <td>
-                <div id="" style="text-align:left"><h4><br></h4></div>
-            </td>
-        </tr>
-        <div id="proc_trend" class="col-md-6 dc-chart"  data-step="6" data-intro="Select a timeframe to restrict activities to that interval only."  data-position="top" style="text-align:center" ><h5>Supply Timeline <a class="reset" href="javascript:proc_trend_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
-    </table>
-
-  </div>
-
-<div id="map" class="col-md-6 dc-chart"  data-step="7" data-intro="Hover the mouse over a governorate to see the value of items released."  data-position="left"  style="text-align:left; margin: 20px" ><h5></h5></div>
-
+        <div id="proc_total_op" class="col-md-4 dc-chart"  data-step="5" data-intro="Click on this chart to filter items/activities by the operation."  data-position="left"  style="text-align:left" >
+            <h5>Number of days per country
+             <a class="reset" href="javascript:proc_total_op.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
+        
+        <div id="proc_trend" class="col-md-6 dc-chart"  data-step="6" data-intro="Select a timeframe to restrict activities to that interval only."  data-position="top" style="text-align:center" >
+            <h5>Supply Timeline <a class="reset" href="javascript:proc_trend_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
+        </div>
+        <!--
+        <div id="map" class="col-md-6 dc-chart"  data-step="7" data-intro="Hover the mouse over a governorate to see the value of items released."  data-position="left"  style="text-align:left; margin: 20px" >
+            <h5></h5>
+        </div>
+         -->
 <div class="row">
 <div></div>
 <div></div>
@@ -111,7 +126,7 @@
   });
 
 //declaration of chart names and types
-        var value_chart = dc.rowChart("#item_value");
+      //  var value_chart = dc.rowChart("#item_value");
         var proc_total_status_chart = dc.pieChart("#proc_total_status");
         var proc_total_target_chart = dc.rowChart("#proc_total_target");
         var proc_total_op = dc.rowChart("#proc_total_op");
@@ -120,10 +135,17 @@
 
 // Miso dataset importing google spreadsheet by spreadsheet ID
         var ds = new Miso.Dataset({
+<<<<<<< HEAD
             importer : Miso.Dataset.Importers.GoogleSpreadsheet,
             parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
             key : "119hTf0bswZhMbqbTbczJmxImqN--d9arT84VntnJfCk",
             worksheet : "1"
+=======
+  key : "1defWVBu1yH5rffRI0EEd6lajfIb9ZRb-iJgn4xqYGY4",
+  worksheet : "1",
+  importer: Miso.Dataset.Importers.GoogleSpreadsheet,
+  parser : Miso.Dataset.Parsers.GoogleSpreadsheet
+>>>>>>> origin/gh-pages
 });
 
 // declare array to be filled with data from Google spreadsheet
@@ -144,33 +166,26 @@ ds.fetch({
 
 //formatting of numbers, dates
         var numberFormat = d3.format(",f");
-        var dateFormat = d3.time.format("%Y-%m-%d");
+        var dateFormat = d3.time.format("%Y-%d-%m");
         var monthNameFormat = d3.time.format("%B");
 //crossfilter data
         var cf = crossfilter(spreadsheetdata);
 
 //declare crossfilter dimensions to be used in charts
-        cf.targetpop = cf.dimension(function (d) {
-          return d.Target_Population;
-        });
-        cf.op = cf.dimension(function (d) {
-          return d.Operation;
-        });
-        cf.item = cf.dimension(function (d) {
-          return d.Item;
-        });
+        cf.targetpop = cf.dimension(function (d) { return d.Target_Population; });
 
-        cf.status = cf.dimension(function (d) {
-          return d.Status;
-        });
-        cf.location = cf.dimension(function (d) {
-            return d.Location;
-        });
+        cf.op = cf.dimension(function (d) { return d.Operation; });
 
-//gruop by dimensions
+        cf.item = cf.dimension(function (d) { return d.Item;});
+
+        cf.status = cf.dimension(function (d) { return d.Status; });
+
+        cf.location = cf.dimension(function (d) {return d.Location; });
+
+//group by dimensions
         var targetpop = cf.targetpop.group();
         var op = cf.op.group();
-        // var date = cf.date.group();
+      //  var date = cf.date.group();
         var item = cf.item.group();
         var status = cf.status.group();
         var location = cf.location.group();
@@ -203,7 +218,7 @@ ds.fetch({
         });
 
 //parse date from data array
-        var parseDate = d3.time.format("%Y-%m-%d").parse;
+        var parseDate = d3.time.format("%Y-%d-%m").parse;
         spreadsheetdata.forEach(function(d) {
             d.date = parseDate(d.Date);
             d.month = d3.time.month(d.date);
@@ -226,7 +241,7 @@ ds.fetch({
       // Serializing filters values in URL
       function getFiltersValues() {
           var filters = [
-              { name: 'value', value: value_chart.filters()},
+            //  { name: 'value', value: value_chart.filters()},
               { name: 'proc', value: proc_total_status_chart.filters()},
               { name: 'proc2', value: proc_total_target_chart.filters()},
               { name: 'itm_qty', value: itm_qty_chart.filters()},
@@ -292,8 +307,11 @@ ds.fetch({
                   return "<span style='color: #fff'>" +  monthNameFormat(d.key) + "</span> : "  + numberFormat(d.value) + " USD";
               });
 
-// Item value chart
-      value_chart.width(400).height(485)
+     // Item value chart
+     /*
+      value_chart
+                .width(400)
+                .height(485)
                 .dimension(cf.item)
                 .group(item_total_value  = item_total_value || 0)
                 .elasticX(true)
@@ -301,9 +319,24 @@ ds.fetch({
                 .renderTitle(false)
                 .on("filtered", getFiltersValues)
                 .xAxis().ticks(6).tickFormat(d3.format("$,s"));
+      */
+      
+      // Item quantity chart
+      itm_qty_chart
+                .width(400)
+                .height(350)
+                .dimension(cf.item)
+                .on("filtered", getFiltersValues)
+                .group(item_total_quantity = item_total_quantity || 0)
+                .elasticX(true)
+                .renderTitle(false)
+                .renderLabel(true)
+                .xAxis().ticks(6).tickFormat(d3.format("s"));
 
-// Status chart
-      proc_total_status_chart.width(300).height(200)
+      // Status chart
+      proc_total_status_chart
+                .width(300)
+                .height(200)
                 .dimension(cf.status)
                 .group(status_by_total  = status_by_total || 0)
                 .radius(100)
@@ -315,79 +348,70 @@ ds.fetch({
                 .renderTitle(false)
                 .on("filtered", getFiltersValues);
 
-// Target population chart
-      proc_total_target_chart.width(300).height(120)
+      // Target population chart
+      proc_total_target_chart
+                .width(400)
+                .height(350)
                 .dimension(cf.targetpop)
                 .group(targetpop_by_total  = targetpop_by_total || 0)
                 .elasticX(false)
                 .renderLabel(true)
                 .renderTitle(false)
                 .on("filtered", getFiltersValues)
-                .xAxis().ticks(4).tickFormat(d3.format("$,s"));
+                .xAxis().ticks(4).tickFormat(d3.format(",s"));
 
-// Operation chart
-      proc_total_op.width(300).height(90)
+      // Operation chart
+      proc_total_op
+                .width(400)
+                .height(400)
                 .dimension(cf.op)
                 .group(op_by_total = op_by_total || 0)
                 .elasticX(false)
                 .renderLabel(true)
                 .renderTitle(false)
                 .on("filtered", getFiltersValues)
-                .xAxis().ticks(4).tickFormat(d3.format("$,s"));
+                .xAxis().ticks(4).tickFormat(d3.format(",s"));
 
-// Item quantity chart
-	  itm_qty_chart.width(400).height(485)
-                .dimension(cf.item)
-                .on("filtered", getFiltersValues)
-                .group(item_total_quantity = item_total_quantity || 0)
-                .elasticX(true)
-                .renderTitle(false)
-                .renderLabel(true)
-                .xAxis().ticks(6).tickFormat(d3.format("s"));
-
-// Timeline bar chart
+      // Timeline bar chart
       proc_trend_chart
-                .height(300)
-                .width(600)
+                .height(200)
+                .width(750)
                 .renderHorizontalGridLines(true)
                 .dimension(datedimension)
                 .group(value_by_date)
                 // .renderTitle(true)
                 .title(function (d) { return monthNameFormat(d.key) + ": " + numberFormat(d.value); })
-// define scale based on minimum and maximum dates
+                // define scale based on minimum and maximum dates
                 .x(d3.time.scale().domain([minDate,maxDate]))
                 .xUnits(d3.time.months)
                 .on("filtered", getFiltersValues)
                 .brushOn(true)
                 // .gap(10)
                 .elasticY(false)
-
-// rotate and move X axis labels
+               // rotate and move X axis labels
                 .renderlet(function (chart) {
                 chart.selectAll("g.x text")
                      .attr('dx', '-30')
                      .attr('transform', "rotate(-45)");
                       })
                 .margins({left: 70 ,top: 10, bottom: 50, right: 50})
-                .yAxis().ticks(7).tickFormat(d3.format("$,s"));
-
+                .yAxis().ticks(7).tickFormat(d3.format(",s"));
 
         //Map
         //Import admin level 1 geojson
+        /*
         d3.json("data/admin1.geojson", function(json) {
 
-// extend admin level 1 map geojson features with values, paired by location code that appears on both the map and the dataset
+            // extend admin level 1 map geojson features with values, 
+            //paired by location code that appears on both the map and the dataset
             for (var i = 0; i < Location_json.length; i++) {
                 var dist_Location = Location_json[i].A1Code;
                 var dist_Value = parseFloat(Location_json[i].Value);
-
                 for (var j = 0; j < json.features.length; j++) {
                     var jsonGov = json.features[j].properties.A1Code;
-
                     if (dist_Location == jsonGov) {
                         json.features[j].properties.Value = dist_Value;
                         break;
-
                     }
                 }
             }
@@ -487,7 +511,7 @@ ds.fetch({
                 onEachFeature: onEachFeature
             }).addTo(map);
 
-// legend control (not used)
+            // legend control (not used)
             var legend = L.control({position: 'bottomleft'});
 
             legend.onAdd = function (map) {
@@ -511,6 +535,7 @@ ds.fetch({
             };
             //legend.addTo(map);
         });
+        */
 
 
          initFilters();
@@ -533,11 +558,25 @@ ds.fetch({
 });
 
 
-  </script>
-	<script src="js/bootstrap.js"></script>
+</script>
 
- <div class="d3-tip n" style="position: absolute; display: none; box-sizing: border-box; top: 186.9px; left: 727.5px;"></div><div class="d3-tip" style="position: absolute; display: none; box-sizing: border-box;">
-            <div></div>
-            </body>
+<script src="js/bootstrap.js"></script>
+
+<div class="d3-tip n" style="position: absolute; display: none; box-sizing: border-box; top: 186.9px; left: 727.5px;"></div><div class="d3-tip" style="position: absolute; display: none; box-sizing: border-box;">
+
+<div></div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55986212-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
 </html>
 
