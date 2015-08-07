@@ -426,7 +426,7 @@ ds.fetch({
             // declare what to show in information control
             info.update = function (props) {
                 this._div.innerHTML = '<h4>Number of days</h4>' +  (props ?
-                        '<b>' + props.A1NameEn + '</b><br />' + numberFormat(props.Value = props.Value || 0)
+                        '<b>' + props.A1Code + '</b><br />' + numberFormat(props.Value = props.Value || 0)
                         : 'Hover over a country');
             };
 
