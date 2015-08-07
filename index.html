@@ -404,15 +404,12 @@ ds.fetch({
             // declare leaflet map with an empty tile layer
             var map = L.map('map', {
             center: [51.505, -0.09],
-            zoom: 13
+            zoom: 1
             });
             L.tileLayer('', {
                 attribution: "This map does not imply official endorsement or acceptance by the United Nations"
             })
                     .addTo(map);
-
-            // make world fit map
-            map.fitWorld().zoomIn();
 
             // control that shows country info on hover
             var info = L.control();
@@ -435,8 +432,8 @@ ds.fetch({
 
             // get color depending on number of days
             function getColor(d) {
-                return          d > 160 ?   '#084594' :
-                                d > 80 ?   '#2171b5' :
+                return          d > 80 ?   '#084594' :
+                                d > 60 ?   '#2171b5' :
                                 d > 40 ?   '#4292c6' :
                                 d > 20  ?   '#6baed6' :
                                 d > 10  ?   '#9ecae1' :
