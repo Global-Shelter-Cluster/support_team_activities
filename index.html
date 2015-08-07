@@ -381,11 +381,11 @@ ds.fetch({
                 .yAxis().ticks(7).tickFormat(d3.format(",s"));
 
         //Map
-        //Import admin level 1 geojson
+        //Import geojson
         /*
-        d3.json("data/admin1.geojson", function(json) {
+        d3.json("data/map.geojson", function(json) {
 
-            // extend admin level 1 map geojson features with values, 
+            // extend world map geojson features with values, 
             //paired by location code that appears on both the map and the dataset
             for (var i = 0; i < Location_json.length; i++) {
                 var dist_Location = Location_json[i].A1Code;
