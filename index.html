@@ -98,7 +98,7 @@
             <h5>Timeline<a class="reset" href="javascript:proc_trend_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
         </div>
         
-        <div id="map" class="col-md-6 dc-chart"  data-step="7" data-intro="Hover the mouse over a governorate to see the value of items released."  data-position="left"  style="text-align:left; margin: 20px" >
+        <div id="map" class="col-md-6 dc-chart"  data-step="7" data-intro="Hover the mouse over a country to see the number of days."  data-position="left"  style="text-align:left; margin: 20px" >
             <h5></h5>
         </div>
          
@@ -427,7 +427,7 @@ ds.fetch({
 
             // declare what to show in information control
             info.update = function (props) {
-                this._div.innerHTML = '<h4>Released Value</h4>' +  (props ?
+                this._div.innerHTML = '<h4>Number of days</h4>' +  (props ?
                         '<b>' + props.A1NameEn + '</b><br />' + numberFormat(props.Value = props.Value || 0) + ' USD'
                         : 'Hover over a Governorate');
             };
