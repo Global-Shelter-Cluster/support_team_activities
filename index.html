@@ -441,14 +441,14 @@ ds.fetch({
             info.addTo(map);
 
 
-            // get color depending on released value
+            // get color depending on number of days
             function getColor(d) {
-                return          d > 5000000 ?   '#084594' :
-                                d > 2500000 ?   '#2171b5' :
-                                d > 1000000 ?   '#4292c6' :
-                                d > 500000  ?   '#6baed6' :
-                                d > 250000  ?   '#9ecae1' :
-                                d > 100000  ?   '#c6dbef' :
+                return          d > 500 ?   '#084594' :
+                                d > 250 ?   '#2171b5' :
+                                d > 125 ?   '#4292c6' :
+                                d > 75  ?   '#6baed6' :
+                                d > 50  ?   '#9ecae1' :
+                                d > 25  ?   '#c6dbef' :
                             //  d > 50000   ?   '#deebf7' :
                                                 '#f7fbff';
             }
@@ -506,7 +506,7 @@ ds.fetch({
             legend.onAdd = function (map) {
 
                 var div = L.DomUtil.create('div', 'info legend'),
-                        grades = [0, 50000, 100000, 250000, 500000, 1000000, 2000000, 2500000],
+                        grades = [0, 25, 50, 75, 125, 250, 500],
                         labels = [],
                         from, to;
 
