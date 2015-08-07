@@ -414,14 +414,6 @@ ds.fetch({
             // make world fit map
             map.fitWorld().zoomIn();
 
-            // disable map user interaction including dragging, zoom, clicking, keyboard, etc.
-            map.dragging.disable();
-            map.touchZoom.disable();
-            map.doubleClickZoom.disable();
-            map.scrollWheelZoom.disable();
-            map.boxZoom.disable();
-            map.keyboard.disable();
-
             // control that shows country info on hover
             var info = L.control();
 
