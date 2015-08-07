@@ -411,6 +411,9 @@ ds.fetch({
             })
                     .addTo(map);
 
+            // make world fit map
+            map.fitWorld().zoomIn();
+
             // disable map user interaction including dragging, zoom, clicking, keyboard, etc.
             map.dragging.disable();
             map.touchZoom.disable();
@@ -431,7 +434,7 @@ ds.fetch({
             // declare what to show in information control
             info.update = function (props) {
                 this._div.innerHTML = '<h4>Number of days</h4>' +  (props ?
-                        '<b>' + props.A1NameEn + '</b><br />' + numberFormat(props.Value = props.Value || 0) + ' USD'
+                        '<b>' + props.A1NameEn + '</b><br />' + numberFormat(props.Value = props.Value || 0)
                         : 'Hover over a country');
             };
 
