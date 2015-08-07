@@ -416,7 +416,7 @@ ds.fetch({
             map.boxZoom.disable();
             map.keyboard.disable();
 
-            // control that shows Governorate info on hover
+            // control that shows country info on hover
             var info = L.control();
 
             info.onAdd = function (map) {
@@ -429,7 +429,7 @@ ds.fetch({
             info.update = function (props) {
                 this._div.innerHTML = '<h4>Number of days</h4>' +  (props ?
                         '<b>' + props.A1NameEn + '</b><br />' + numberFormat(props.Value = props.Value || 0) + ' USD'
-                        : 'Hover over a Governorate');
+                        : 'Hover over a country');
             };
 
             info.addTo(map);
@@ -457,7 +457,7 @@ ds.fetch({
                     fillColor: getColor(feature.properties.Value)
                 };
             }
-            // highlight selected governorate
+            // highlight selected country
             function highlightFeature(e) {
                 var layer = e.target;
 
