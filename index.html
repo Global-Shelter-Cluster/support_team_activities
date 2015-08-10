@@ -118,7 +118,7 @@
 //declaration of chart names and types
       //  var value_chart = dc.rowChart("#item_value");
         var proc_total_status_chart = dc.pieChart("#proc_total_status");
-        var proc_total_target_chart = dc.pieChart("#proc_total_target");
+        var proc_total_target_chart = dc.rowChart("#proc_total_target");
         var proc_total_op = dc.rowChart("#proc_total_op");
         var itm_qty_chart = dc.rowChart("#itm_qty");
         var proc_trend_chart = dc.barChart("#proc_trend");
@@ -306,18 +306,15 @@ ds.fetch({
       
       // Item quantity chart
       itm_qty_chart
-                .width(300)
-                .height(200)
+                .width(400)
+                .height(350)
                 .dimension(cf.item)
+                .on("filtered", getFiltersValues)
                 .group(item_total_quantity = item_total_quantity || 0)
-                .radius(100)
-                .innerRadius(25)
-                .slicesCap(15)
-                //.legend(dc.legend().gap(3))
-                .colors(d3.scale.category20())
-                .renderLabel(true)
+                .elasticX(true)
                 .renderTitle(false)
-                .on("filtered", getFiltersValues);
+                .renderLabel(true)
+                .xAxis().ticks(6).tickFormat(d3.format("s"));
 
       // Status chart
       proc_total_status_chart
