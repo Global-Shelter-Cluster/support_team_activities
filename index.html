@@ -434,9 +434,9 @@ ds.fetch({
 
             // get color depending on number of days
             function getColor(d) {
-                return          d > 80 ?   '#084594' :
-                                d > 60 ?   '#2171b5' :
-                                d > 40 ?   '#4292c6' :
+                return          d > 50 ?   '#084594' :
+                                d > 40 ?   '#2171b5' :
+                                d > 30 ?   '#4292c6' :
                                 d > 20  ?   '#6baed6' :
                                 d > 10  ?   '#9ecae1' :
                                 d > 5  ?   '#c6dbef' :
@@ -497,7 +497,7 @@ ds.fetch({
             legend.onAdd = function (map) {
 
                 var div = L.DomUtil.create('div', 'info legend'),
-                        grades = [0, 5, 10, 20, 40, 80, 160],
+                        grades = [0, 5, 10, 20, 30, 40, 50],
                         labels = [],
                         from, to;
 
