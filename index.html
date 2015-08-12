@@ -85,7 +85,7 @@
           <h5>Hosting organisation
           <a class="reset" href="javascript:proc_total_status_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5>
        </div>
- <div id="proc_total_target" class="col-md-4 dc-chart"  data-step="4" data-intro="Click on this chart to filter by function."  data-position="left"  style="text-align:left" >
+ <div id="proc_total_target" class="col-md-4 dc-chart"  data-step="4" data-intro="Click on this pie chart to filter by function."  data-position="left"  style="text-align:left" >
             <h5>Function
             <a class="reset" href="javascript:proc_total_target_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
 </div>
@@ -120,7 +120,7 @@
 //declaration of chart names and types
       //  var value_chart = dc.rowChart("#item_value");
         var proc_total_status_chart = dc.pieChart("#proc_total_status");
-        var proc_total_target_chart = dc.rowChart("#proc_total_target");
+        var proc_total_target_chart = dc.pieChart("#proc_total_target");
         var proc_total_op = dc.rowChart("#proc_total_op");
         var itm_qty_chart = dc.rowChart("#itm_qty");
         var proc_trend_chart = dc.barChart("#proc_trend");
@@ -335,15 +335,18 @@ ds.fetch({
 
       // Target population chart
       proc_total_target_chart
-                .width(400)
-                .height(350)
+                .width(300)
+                .height(200)
                 .dimension(cf.targetpop)
                 .group(targetpop_by_total  = targetpop_by_total || 0)
-                .elasticX(false)
+                .radius(100)
+                .innerRadius(25)
+                .slicesCap(15)
+                .legend(dc.legend().gap(3))
+                .colors(d3.scale.category20())
                 .renderLabel(true)
                 .renderTitle(false)
-                .on("filtered", getFiltersValues)
-                .xAxis().ticks(4).tickFormat(d3.format(",s"));
+                .on("filtered", getFiltersValues);
 
       // Operation chart
       proc_total_op
