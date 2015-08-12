@@ -280,7 +280,7 @@ ds.fetch({
               .attr('class', 'd3-tip')
               .offset([-10, 0])
               .html(function (d) {
-                  return "<span style='color: #fff'>" + d.data.key + "</span> : " + numberFormat(d.value);
+                  return "<span style='color: #fff'>" + d.key + "</span> : " + numberFormat(d.value);
               });
       // tooltip for bar chart (not used)
       var barTip = d3.tip()
