@@ -77,7 +77,7 @@
       <!--
       <div id="item_value" class="col-md-4 dc-chart"  data-step="1" data-intro="Click on this chart to filter values by item group. The chart scale changes dynamically." data-position="right" style="text-align:left"><h5>NFI Values by Item Group (USD) <a class="reset" href="javascript:value_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
       -->
-      <div id="itm_qty" class="col-md-4 dc-chart" style="text-align:left"  data-step="2" data-intro="Click on this chart to filter by type of support/mission. The chart scale changes dynamically." data-position="right" >
+      <div id="itm_qty" class="col-md-4 dc-chart" style="text-align:left"  data-step="2" data-intro="Click on this pie chart to filter by type of support/mission. The chart scale changes dynamically." data-position="right" >
           <h5>Type of support/mission
           <a class="reset" href="javascript:itm_qty_chart.filterAll();dc.redrawAll();"style="display: none;">reset</a></h5></div>
       
@@ -122,7 +122,7 @@
         var proc_total_status_chart = dc.pieChart("#proc_total_status");
         var proc_total_target_chart = dc.pieChart("#proc_total_target");
         var proc_total_op = dc.pieChart("#proc_total_op");
-        var itm_qty_chart = dc.rowChart("#itm_qty");
+        var itm_qty_chart = dc.pieChart("#itm_qty");
         var proc_trend_chart = dc.barChart("#proc_trend");
 
 // Miso dataset importing google spreadsheet by spreadsheet ID
@@ -308,15 +308,18 @@ ds.fetch({
       
       // Item quantity chart
       itm_qty_chart
-                .width(400)
-                .height(350)
+                .width(300)
+                .height(200)
                 .dimension(cf.item)
-                .on("filtered", getFiltersValues)
-                .group(item_total_quantity = item_total_quantity || 0)
-                .elasticX(true)
-                .renderTitle(false)
+                .group(item_by_total  = item_by_total || 0)
+                .radius(100)
+                .innerRadius(25)
+                .slicesCap(15)
+                .legend(dc.legend().gap(3))
+                .colors(d3.scale.category20())
                 .renderLabel(true)
-                .xAxis().ticks(6).tickFormat(d3.format("s"));
+                .renderTitle(false)
+                .on("filtered", getFiltersValues);
 
       // Status chart
       proc_total_status_chart
