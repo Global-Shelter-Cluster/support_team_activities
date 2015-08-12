@@ -327,7 +327,7 @@ ds.fetch({
                 .radius(100)
                 .innerRadius(25)
                 .slicesCap(15)
-                //.legend(dc.legend().gap(3))
+                .legend(dc.legend().gap(3))
                 .colors(d3.scale.category20())
                 .renderLabel(true)
                 .renderTitle(false)
@@ -491,7 +491,7 @@ ds.fetch({
                 onEachFeature: onEachFeature
             }).addTo(map);
 
-            // legend control (not used)
+            // legend control
             var legend = L.control({position: 'bottomleft'});
 
             legend.onAdd = function (map) {
@@ -513,7 +513,7 @@ ds.fetch({
                 div.innerHTML = labels.join('<br>');
                 return div;
             };
-            //legend.addTo(map);
+            legend.addTo(map);
         });
         
 
